@@ -1,0 +1,226 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------reset----------------------------- */
+
+.bck-img {
+    display: none;
+}
+
+
+html {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    max-width: 330px;
+    text-align: center;
+}
+
+
+.main-img img {
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-text {
+    padding: 30px 20px;
+}
+
+.title {
+    color: hsl(223, 47%, 23%);
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: hsl(224, 23%, 55%);
+    font-size: 15px;
+}
+
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    padding: 20px 15px;
+    margin: 25px 0;
+    border-radius: 10px;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.annual {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.music-image img {
+    max-width: 45px;
+}
+
+
+.music-plan p:nth-child(1) {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.music-plan p:nth-child(2) {
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+.music-change a {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    font-size: 13px;
+}
+
+.music-change a:hover,
+.music-change a:focus {
+    color: hsl(241, 82%, 69%);
+    text-decoration: none;
+}
+
+
+.payment button {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+
+.payment button:hover,
+.payment button:focus {
+    background-color: hsl(241, 82%, 69%);
+    box-shadow: hsl(241, 82%, 69%, 0.3) 0px 20px 20px -7px;
+}
+
+.order-cancel a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+}
+
+
+.order-cancel a:hover,
+.order-cancel a:focus {
+    color: hsl(223, 47%, 23%);
+}
+
+
+
+@media (min-width:1290px) {
+
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .container {
+        max-width: 370px;
+    }
+}
